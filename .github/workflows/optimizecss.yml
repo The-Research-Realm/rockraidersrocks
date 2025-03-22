@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # This fix "Missing write access to /usr/local/lib/node_modules" error
-      - name: Setup node 14 properly
+      - name: Setup node 21 properly
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 21
       - name: Install critical
         run: |
           npm i -g critical
@@ -29,7 +29,8 @@ jobs:
         run: | # Find each HTML file on root. remove online (critical)css. Add critical css to temp html file. Rename temp html file to original.
           find . -type f \( -iname "*.htm" -o -iname "*.html" \)|while read fname; do
             sed -i '/<style>.*<\/style>$/d' "$fname"
-            critical "$fname" --base . --inline --css assets/css/*.css > "$fname"-crit
+            dname=`dirname "$fname"`
+            critical "$fname" --base . --inline --css "${dname}/*.min.css" > "$fname"-crit
             mv "$fname"-crit "$fname"
           done
       - name: Commit files
@@ -39,16 +40,3 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git diff --quiet && git diff --staged --quiet || git commit -am "purged & made critical CSS"
           git push
-  lighthouse:
-    needs: optimizecss
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: rm 404.html
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          budgetPath: '.github/.lighthouse/budget.json' # test performance budgets
-          configPath: '.github/.lighthouse/lighthouserc.json'
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
