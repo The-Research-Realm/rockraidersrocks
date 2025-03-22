@@ -22,7 +22,7 @@ jobs:
       - name: Run purgecss
         run: |
           find . -type f \( -iname "*.css" \) -not -name "*.min.css" | while read ffname; do
-            dname=`dirname "$ffname"`
+            dname=`dirname "$ffname"/`
             fname=`basename "$ffname" .css`
             purgecss -css "$ffname" -con "**.html" "**.js" "**.php" -o "$dname""$fname".min.css
           done
