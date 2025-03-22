@@ -10,13 +10,13 @@ jobs:
   Convert-Compress:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup node 14 properly
+      - name: Setup node 21 properly
         uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 21
       - name: Install dependencies
         run: |
-          npm i -g @funboxteam/optimizt
+          npm i -g @343dev/optimizt
       - uses: actions/checkout@v4
       - name: run optimizt
         run: optimizt --verbose --force --avif --webp .
