@@ -1,5 +1,5 @@
-# rockraidersrocks
-Webfiles for the website rockraiders.rocks and lrr.researchrealm.net
+# rockraiders.rocks & lrr.researchrealm.net
+Git repo for the website rockraiders.rocks and lrr.researchrealm.net
 
 ## Security Headers and you
 
