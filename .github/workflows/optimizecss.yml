@@ -18,13 +18,6 @@ jobs:
       - name: Install critical
         run: |
           npm i -g critical
-      - name: Install purgecss
-        run: |
-          npm i -g purgecss
-      - uses: actions/checkout@v4
-      - name: Run purgecss
-        run: |
-          purgecss --css ../**/*.css --content "**.html" "**.js" --output assets/css/
       - name: Run critical
         run: | # Find each HTML file on root. remove online (critical)css. Add critical css to temp html file. Rename temp html file to original.
           find . -type f \( -iname "*.htm" -o -iname "*.html" \)|while read fname; do
