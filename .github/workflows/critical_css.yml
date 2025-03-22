@@ -1,16 +1,13 @@
-name: Optimize CSS
+name: Generate Critical CSS inline
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: "0 0 * * *" # Every day at 00:00 UTC
-  # Allows you to run this workflow manually from the Actions tab
+    - cron: "5 0 * * thu" # Every thursday at 00:05 UTC
   workflow_dispatch:
 
 jobs:
   optimizecss:
     runs-on: ubuntu-latest
     steps:
-      # This fix "Missing write access to /usr/local/lib/node_modules" error
       - name: Setup node 21 properly
         uses: actions/setup-node@v2
         with:
@@ -19,8 +16,8 @@ jobs:
         run: |
           npm i -g critical
       - uses: actions/checkout@v4
-      - name: Run critical
-        run: | # Find each HTML file on root. remove online (critical)css. Add critical css to temp html file. Rename temp html file to original.
+      - name: Generate critical CSS
+        run: | # Find all html files, remove inline style, get the directory location, generate based on the minified css in the same folder the critical CSS to the existing html
           find . -type f \( -iname "*.htm" -o -iname "*.html" \)|while read fname; do
             sed -i '/<style>.*<\/style>$/d' "$fname"
             dname=`dirname "$fname"`

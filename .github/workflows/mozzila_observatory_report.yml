@@ -1,13 +1,13 @@
-name: Refresh Observatory score
+name: Refresh Mozzila HTTP Observatory Report
 on:
   schedule:
-    - cron:  '0 0 * * mon' # Every monday at midnight
+    - cron: '0 0 * * mon' # Every monday at midnight
   workflow_dispatch:
 
 jobs:
   refresh_score:
     runs-on: ubuntu-latest
-    name: Refresh Observatory score
+    name: Refresh HTTP Observatory Report
     steps:
       - name: Curl the site to initiate refresh
         run: curl -L https://observatory.mozilla.org/analyze/rockraiders.rocks

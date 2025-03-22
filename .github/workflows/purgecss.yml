@@ -1,13 +1,13 @@
 name: Minify CSS
 on:
-  # Allows you to run this workflow manually from the Actions tab
+  schedule:
+    - cron: "5 0 * * sat" # Every saturday at 00:05 UTC
   workflow_dispatch:
 
 jobs:
   purgecss:
     runs-on: ubuntu-latest
     steps:
-      # This fix "Missing write access to /usr/local/lib/node_modules" error
       - name: Setup node 21 properly
         uses: actions/setup-node@v4
         with:

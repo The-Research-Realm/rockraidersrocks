@@ -1,9 +1,7 @@
-name: Refresh README.md Pagespeed
+name: Refresh Pagespeed results for README
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: "5 0 * * *" # Every day at 00:05 UTC
-  # Allows you to run this workflow manually from the Actions tab
+    - cron: "5 0 * * tue" # Every tuesday at 00:05 UTC
   workflow_dispatch:
 
 jobs:
@@ -15,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Create local changes
-      run: | # Have to be sure a folder is present if not, make it
+    - name: Fetch resulsts and save it in the repo
+      run: |
           mkdir -p ${RESULTSFOLDER}
           curl "${PSURL}/?url=${HOST}&strategy=desktop" > ./${RESULTSFOLDER}/PSIRD.svg
           curl "${PSURL}/?url=${HOST}&strategy=mobile" > ./${RESULTSFOLDER}/PSIRM.svg
