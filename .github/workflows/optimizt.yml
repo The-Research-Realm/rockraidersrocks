@@ -1,0 +1,39 @@
+name: Generate AVIF and WEBP
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch and only when there's JPEG/PNG in the commmit!
+  push:
+    paths:
+      - "**.jpe?g"
+      - "**.png"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  Convert-Compress:
+    runs-on: ubuntu-latest
+    steps:
+      # This fixes the "Missing write access to /usr/local/lib/node_modules" error
+      - name: Setup node 14 properly
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: |
+          npm i -g @funboxteam/optimizt
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, pushing refs to dest repo will fail
+      - name: run optimizt
+        run: optimizt --verbose --force --avif --webp .
+      - name: Commit files
+        run: |
+          git add .
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff --quiet && git diff --staged --quiet || git commit -am "Create WebP & AVIF versions"
+      - name: Push changes
+        uses: ad-m/github-push-action@master # This is a premade github action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
