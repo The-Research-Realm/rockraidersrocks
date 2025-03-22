@@ -17,7 +17,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1.6.1
       with:
-        base-url-path: https://voxsiren.net/
+        base-url-path: https://rockraiders.rocks/
     - name: Output stats
       run: |
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
