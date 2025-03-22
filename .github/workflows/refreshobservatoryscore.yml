@@ -1,9 +1,7 @@
 name: Refresh Observatory score
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 * * *' # every other day at 00:00 UTC
-  # Allows you to run this workflow manually from the Actions tab
+    - cron:  '0 0 * * mon' # Every monday at midnight
   workflow_dispatch:
 
 jobs:
@@ -12,4 +10,4 @@ jobs:
     name: Refresh Observatory score
     steps:
       - name: Curl the site to initiate refresh
-        run: curl -L https://observatory.mozilla.org/analyze/voxsiren.net
+        run: curl -L https://observatory.mozilla.org/analyze/rockraiders.rocks
