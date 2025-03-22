@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup node 21 properly
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 21
       - name: Install critical
