@@ -20,10 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm i -g @funboxteam/optimizt
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, pushing refs to dest repo will fail
+      - uses: actions/checkout@v4
       - name: run optimizt
         run: optimizt --verbose --force --avif --webp .
       - name: Commit files
@@ -32,8 +29,4 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "github-actions[bot]"
           git diff --quiet && git diff --staged --quiet || git commit -am "Create WebP & AVIF versions"
-      - name: Push changes
-        uses: ad-m/github-push-action@master # This is a premade github action
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          git push

@@ -12,9 +12,7 @@ jobs:
     name: Generate a sitemap
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      uses: actions/checkout@v4
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1.6.1
@@ -31,8 +29,4 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "github-actions[bot]"
         git diff --quiet && git diff --staged --quiet || git commit -am "updated sitemap"
-    - name: Push changes
-      uses: ad-m/github-push-action@master # This is a premade github action
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        git push
