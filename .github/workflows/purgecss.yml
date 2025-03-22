@@ -8,10 +8,6 @@ jobs:
   purgecss:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup node 21 properly
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21
       - name: Install purgecss
         run: |
           npm i -g purgecss
