@@ -8,10 +8,6 @@ jobs:
   optimizecss:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup node 21 properly
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21
       - name: Install critical
         run: |
           npm i -g critical
