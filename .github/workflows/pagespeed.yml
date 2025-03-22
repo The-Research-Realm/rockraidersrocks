@@ -2,17 +2,15 @@ name: Refresh README.md Pagespeed
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "5 0 * * *" # Every day at 00:00 UTC
+    - cron: "5 0 * * *" # Every day at 00:05 UTC
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   getpsresults:
     env:
-      PSURL: https://pagespeed-insights.herokuapp.com
-      HOST: https://rockraidersx.com
-      PSRDESKTOP: pagespeedresultdesktop
-      PSRMOBILE: pagespeedresultmobile
+      PSURL: https://pagespeed-insights-svg.glitch.me
+      HOST: https://rockraiders.rocks
       RESULTSFOLDER: .github/.lighthouse/
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +18,7 @@ jobs:
     - name: Create local changes
       run: | # Have to be sure a folder is present if not, make it
           mkdir -p ${RESULTSFOLDER}
-          curl "${PSURL}/?url=${HOST}&strategy=mobile" > ./${RESULTSFOLDER}/${PSRMOBILE}.svg
+          curl "${PSURL}/?url=${HOST}&strategy=desktop" > ./${RESULTSFOLDER}/PSIR.svg
     - name: Commit files
       run: |
         git add .
