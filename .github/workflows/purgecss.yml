@@ -20,18 +20,18 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Run purgecss
-        run: |
-          find . -type f \( -iname "*.css" \) -not -name "*.min.css" | while read ffname; do
-            dname=`dirname "$ffname"`
-            fname=`basename "$ffname" .css`
-            purgecss -css "$ffname" -con "**.html" "**.js" "**.php" -o "$dname"/"$fname".min.css
+        run: | # Find's all css files with their full paths, we extract the full path minus the file, and then the filename withoud the extension and based on all html, js and php we write to the original location with .min between the filename and extension
+          find . -type f \( -iname "*.css" \) -not -name "*.min.css" | while read cssfile; do
+            dname=`dirname "$cssfile"`
+            fname=`basename "$cssfile" .css`
+            purgecss -css "$cssfile" -con "**.html" "**.js" "**.php" -o "$dname"/"$fname".min.css
           done
       - name: Commit files
         run: |
           git add .
           git config --local user.email "actions@github.com"
           git config --local user.name "github-actions[bot]"
-          git diff --quiet && git diff --staged --quiet || git commit -am "purged CSS"
+          git diff --quiet && git diff --staged --quiet || git commit -am "Updated minified CSS files"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
