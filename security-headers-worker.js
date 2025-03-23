@@ -7,7 +7,7 @@ export default {
     @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
     "Content-Security-Policy": "default-src 'self' example.com *.example.com",
     */
-    "Content-Security-Policy": "default-src 'none'; style-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; script-src 'self';",
+//UNCOMMENT    "Content-Security-Policy": "default-src 'none'; style-src 'self' 'sha256-4Su6mBWzEIFnH4pAGMOuaeBrstwJN4Z3pq/s1Kn4/KQ=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'sha256-p08VBe6m5i8+qtXWjnH/AN3klt1l4uoOLsjNn8BjdQo='; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; script-src 'self'; img-src 'self' data:;",
       /*
     You can also set Strict-Transport-Security headers.
     These are not automatically set because your website might get added to Chrome's HSTS preload list.
@@ -39,7 +39,7 @@ export default {
       "Cross-Origin-Embedder-Policy": 'require-corp; report-to="default";',
       "Cross-Origin-Opener-Policy": 'same-origin; report-to="default";',
       "Cross-Origin-Resource-Policy": "same-site",
-      "access-control-allow-origin": "https://rockraiders.rocks",
+      "access-control-allow-origin": "https://rockraiders.rocks", // for llr.researchrealm.net change the name for that in a seperate worker
     };
     const BLOCKED_HEADERS = [
       "Public-Key-Pins",
