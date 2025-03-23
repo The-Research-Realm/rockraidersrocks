@@ -7,7 +7,7 @@ export default {
     @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
     "Content-Security-Policy": "default-src 'self' example.com *.example.com",
     */
-    "Content-Security-Policy": "default-src 'none'; style-src 'self'; frame-ancestors none; base-uri 'none'; form-action 'none'; script-src 'self';",
+    "Content-Security-Policy": "default-src 'none'; style-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; script-src 'self';",
       /*
     You can also set Strict-Transport-Security headers.
     These are not automatically set because your website might get added to Chrome's HSTS preload list.
