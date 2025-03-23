@@ -13,7 +13,7 @@ You can visit: https://security-headers.rockraidersrocks.workers.dev/ and verify
 
 ### Where can i see what is exactly configured for this worker?
 
-Here: [security-headers-worker JavaScript](security-headers-worker.js)
+Here: [security-headers-worker JavaScript](security-headers-worker.js) and here: [_headers](https://github.com/The-Research-Realm/rockraidersrocks/blob/main/_headers).
 
 ### Where and how do we configure the routes?
 
