@@ -1,4 +1,4 @@
 40025	IGNORE	(Proxy Disclosure | This is because we use Cloudflare, we cannot fix this unless we don't use Cloudflare)
-10015	IGNORE	(We don't have any sensitive information, and we cache everything because it's a fully static website, therefore we can ignore this informational one)
-10049	IGNORE	(We don't have any sensitive information, and we cache everything because it's a fully static website, therefore we can ignore this informational one)
-10050	IGNORE	(We don't have any sensitive information, and we cache everything because it's a fully static website, therefore we can ignore this informational one)
+10015	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
+10049	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
+10050	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
