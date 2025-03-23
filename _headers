@@ -6,3 +6,7 @@ https://rockraiders.rocks/*
 
 https://rockraiders.rocks/robots.txt
   Access-Control-Allow-Origin: https://rockraiders.rocks
+
+https://rockraiders.rocks/sitemap.xml
+  Cross-Origin-Embedder-Policy: 'require-corp'
+  Cross-Origin-Opener-Policy: same-origin
