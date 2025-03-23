@@ -1,14 +1,14 @@
 https://rockraiders.rocks/*
   Access-Control-Allow-Origin: https://rockraiders.rocks
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: 'same-origin'
+  Cross-Origin-Embedder-Policy: 'require-corp'
 
 /*
   Access-Control-Allow-Origin: https://rockraiders.rocks
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: 'same-origin'
+  Cross-Origin-Embedder-Policy: 'require-corp'
 
 https://rockraiders.rocks/robots.txt
   Access-Control-Allow-Origin: https://rockraiders.rocks
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: 'same-origin'
+  Cross-Origin-Embedder-Policy: 'require-corp'
