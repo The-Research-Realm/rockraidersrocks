@@ -28,7 +28,7 @@ This website is hosted fully on [CloudFlare JAM](https://www.cloudflare.com/lear
 
 You can visit: https://security-headers.rockraidersrocks.workers.dev/ and verify it's HTTP headers by opening your [developer console](https://balsamiq.com/support/faqs/browser-console/) in your favorite internet browser. Then visit the Network tab and refresh the page to open the rockraiders.rocks object (index.html) and view it's Response Headers.
 
-![Response Headers](image.png)
+![Response Headers](sec-headers.avif)
 
 ### Where can i see what is exactly configured for this worker?
 
@@ -42,4 +42,4 @@ When logging into dash.cloudflare.com, opening the account, choose rockraiders.r
 
 You can immediatly go to this page by click [here](https://dash.cloudflare.com/c7000110a231a8e08fc154244075ebdd/workers/services/edit/security-headers/production) or from the same location above, you can click on security-headers. But when logging into dash.cloudflare.com, opening the account, go to Workers & Pages, open security-headers. Clicking on the </> icon in the top right opens the window where the worker can be programmed.
 
-![configure security-headers worker](image-1.png)
+![configure security-headers worker](sec-headers-dev.avif)
