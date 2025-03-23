@@ -3,5 +3,5 @@
 10049	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
 10050	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
 40035	IGNORE	(We dont have any sensitive information, and these files just display the index.html)
-693 IGNORE	(I tried, its configured properly but changing the _headers just doesn't work and invokes another medium alert)
-40040 IGNORE	(No clue why it setss those origins, but i wont add something random because that defeats the purpose of it all)
+693	IGNORE	(I tried, its configured properly but changing the _headers just doesn't work and invokes another medium alert)
+40040	IGNORE	(No clue why it setss those origins, but i wont add something random because that defeats the purpose of it all)
