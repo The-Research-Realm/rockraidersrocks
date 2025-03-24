@@ -1,7 +1,7 @@
 name: Generate Critical CSS inline
 on:
-  schedule:
-    - cron: "5 0 * * thu" # Every thursday at 00:05 UTC
+#  schedule:
+#    - cron: "5 0 * * thu" # Every thursday at 00:05 UTC
   workflow_dispatch:
 
 jobs:
