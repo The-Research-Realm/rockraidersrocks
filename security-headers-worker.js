@@ -36,9 +36,9 @@ export default {
     */
       "X-Content-Type-Options": "nosniff",
       "Referrer-Policy": "strict-origin-when-cross-origin",
-      "Cross-Origin-Embedder-Policy": 'require-corp; report-to="default";',
-      "Cross-Origin-Opener-Policy": 'same-origin; report-to="default";',
-      "Cross-Origin-Resource-Policy": "same-site",
+      "Cross-Origin-Embedder-Policy": 'require-corp',
+      "Cross-Origin-Opener-Policy": 'same-origin',
+      "Cross-Origin-Resource-Policy": 'same-site',
       "access-control-allow-origin": "https://rockraiders.rocks", // for llr.researchrealm.net change the name for that in a seperate worker
     };
     const BLOCKED_HEADERS = [
