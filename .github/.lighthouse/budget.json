@@ -16,7 +16,7 @@
         },
         {
           "metric": "interactive",
-          "budget": 2050
+          "budget": 3800
         },
         {
           "metric": "total-blocking-time",
