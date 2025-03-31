@@ -2,4 +2,5 @@
 10015	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
 10049	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
 10050	IGNORE	(We dont have any sensitive information, and we cache everything because its a fully static website, therefore we can ignore this informational one)
-40040	IGNORE	(No clue why it setss those origins, but i wont add something random because that defeats the purpose of it all) 
+40040	IGNORE	(No clue why it setss those origins, but i wont add something random because that defeats the purpose of it all)
+10104	IGNORE	(There's nothing to fix, it only asks you to compare the response statuscode and the hashcode with the original response)
