@@ -10,10 +10,11 @@
       color: #e0e0e0;
       margin: 0;
       padding: 20px;
-      background-image: url('https://i.redd.it/xxrfmnltv0u71.jpg');
+      background-image: url("images/temp-bg.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      font-size: 18px;
     }
     h1, h2 {
       color: #ffcc00;
@@ -32,71 +33,103 @@
       margin-bottom: 40px;
       box-shadow: 0 0 10px #000;
     }
-    ul {
+    ul.language-list {
       list-style-type: none;
       padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    ul.full-width-list {
+      list-style-type: none;
+      padding-left: 0;
     }
     li {
       background: #262626;
-      padding: 12px 20px;
+      padding: 20px;
       border-left: 6px solid #ffcc00;
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.2s;
+      text-align: center;
     }
     li:hover {
       background: #333;
     }
     .addon-description {
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #ccc;
-      margin-top: 5px;
+      margin-top: 10px;
+      text-align: left;
     }
     a.language-link, a.download-link {
       color: inherit;
       text-decoration: none;
       display: block;
     }
+    #audio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    #playPauseBtn {
+      background-color: #000;
+      color: #ffcc00;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    #playPauseBtn:hover {
+      background-color: #222;
+    }
+    .addon-spacing {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Lego Rock Raiders Installer</h1>
+  <div id="audio-header">
+    <h1>Lego Rock Raiders Installer</h1>
+    <button id="playPauseBtn">▶ Play</button>
+    <audio id="sampleAudio" src="sample.mp3"></audio>
+  </div>
 
   <div class="section">
     <h2>Choose Your Language</h2>
-    <ul>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">English (English)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Deutsch (German)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Français (French)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Español (Spanish)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Italiano (Italian)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Nederlands (Dutch)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Svenska (Swedish)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Dansk (Danish)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Norsk (Norwegian)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Suomi (Finnish)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Polski (Polish)</a></li>
+    <ul class="language-list">
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Česky (Czech)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Dansk (Danish)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Deutsch (German)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">English (English)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Español (Spanish)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Français (French)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Italiano (Italian)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Magyar (Hungarian)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Русский (Russian)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Nederlands (Dutch)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Norsk (Norwegian)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Polski (Polish)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Português (Brasil)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Português (Portugal)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Suomi (Finnish)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Svenska (Swedish)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Türkçe (Turkish)</a></li>
+      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Русский (Russian)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">日本語 (Japanese)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">한국어 (Korean)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">简体中文 (Chinese Simplified)</a></li>
       <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">繁體中文 (Chinese Traditional)</a></li>
-      <li><a class="language-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">Türkçe (Turkish)</a></li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Optional Add-ons</h2>
-    <ul>
-      <li>
+    <ul class="full-width-list">
+      <li class="addon-spacing" style="text-align: left;">
         <a class="download-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">
           <strong>OpenLRR</strong>
           <div class="addon-description">
@@ -106,7 +139,7 @@
           </div>
         </a>
       </li>
-      <li>
+      <li style="text-align: left;">
         <a class="download-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">
           <strong>Lego Rock Raiders Community Edition</strong>
           <div class="addon-description">
@@ -121,8 +154,8 @@
 
   <div class="section">
     <h2>Standalone Overhaul</h2>
-    <ul>
-      <li>
+    <ul class="full-width-list">
+      <li style="text-align: left;">
         <a class="download-link" href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe">
           <strong>Baz's Mod</strong>
           <div class="addon-description">
@@ -134,6 +167,21 @@
       </li>
     </ul>
   </div>
+
+  <script>
+    const audio = document.getElementById("sampleAudio");
+    const btn = document.getElementById("playPauseBtn");
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "⏸ Pause";
+      } else {
+        audio.pause();
+        btn.textContent = "▶ Play";
+      }
+    });
+  </script>
 
 </body>
 </html>
