@@ -1,4 +1,4 @@
-name: Generate AVIF and WEBP
+name: Generate AVIF
 on:
   push:
     paths:
@@ -15,7 +15,7 @@ jobs:
           npm i -g @343dev/optimizt
       - uses: actions/checkout@v4
       - name: run optimizt
-        run: optimizt --verbose --force --avif --webp . # -l for lossless! also max 100 conversion per task run
+        run: optimizt --verbose --force --avif . # -l for lossless! also max 100 conversion per task run
       - name: Commit files
         run: |
           git add .
