@@ -9,6 +9,3 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Content-Security-Policy: default-src 'none'; style-src 'nonce-CA66FDC87ECFAD9A0564A4EFF6E2DCA47C34CE8FC01DE4049480DD48CED56E228A1B1D045AA788E9D2B466233A07C6AB5B3813D2596Elmsexplorer18nov1999'; frame-ancestors 'none'; base-uri 'none'; media-src 'self'; form-action 'none'; script-src 'nonce-16E8CA185419EBD44CD33F8CB1E484FB16224D050B9C13FBC37152AAE940EC4DFAB10BD84F2D95CB48376B7A4C0221F04497ZALandSlideHasOccuredmay2019' 'strict-dynamic'; img-src 'self' data:;
-
-https://lrr.researchrealm.net/*
-  Access-Control-Allow-Origin: https://lrr.researchrealm.net
