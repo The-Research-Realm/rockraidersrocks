@@ -14,11 +14,14 @@
   <meta name="theme-color" content="#221C18">
   <meta name="twitter:card" content="summary_large_image">
   <style>
+    html, body {
+      margin: 0;
+      cursor: url("images/cursor64.avif") 5 5, auto;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d0d0d;
+      background: rgba(0, 0, 0, 0.75);
       color: #e0e0e0;
-      margin: 0;
       padding: 20px;
       background-image: url('images/temp-bg.jpg');
       background-size: cover;
@@ -31,7 +34,7 @@
       text-shadow: 2px 2px #000;
     }
     h1 {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.75);
       padding: 10px 15px;
       border-radius: 10px;
       font-size: 36px;
@@ -41,7 +44,7 @@
       word-break: break-word;
     }
     .section {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.75);
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 40px;
@@ -93,7 +96,7 @@
       flex: 0 1 auto;
     }
     #playPauseBtn {
-      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.75); /* Match section/title background transparency */
       color: #ffcc00;
       font-weight: bold;
       border: none;
@@ -119,12 +122,14 @@
       }
     }
     h2 {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 5px 10px;
+      padding: 3px 8px; /* reduced vertical + horizontal padding */
       border-radius: 6px;
       display: inline-block;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: -5px;
+      margin-bottom: -1px;
+    }
+    .section:last-of-type {
+      margin-bottom: 0;
     }
   </style>
 </head>
