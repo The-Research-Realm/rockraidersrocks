@@ -23,7 +23,3 @@ Pagespeed Desktop score:
 ## Security Headers and you
 
 This website is hosted fully on [CloudFlare JAM](https://www.cloudflare.com/learning/performance/what-is-jamstack/), so we don't have access to a webserver so configuring [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers) is done using a [_headers](https://github.com/The-Research-Realm/rockraidersrocks/blob/main/_headers) file. We try to configure these as tightly as possible and verify it using [securityheaders.com](https://securityheaders.com/?q=https%3A%2F%2Frockraiders.rocks%2F&followRedirects=on), at the time of writing this has the hightest score (A+).
-
-## Font
-
-We use Atari-Classic-Chunky and the example in the issue https://github.com/The-Research-Realm/rockraidersrocks/issues/17 uses: font-size: 24px; letter-spacing: -4px; word-spacing: -6px; to make it look as closely as possible to what you find ingame for the level picker bottom menu.
