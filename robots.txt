@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://rockraiders.rocks/sitemap.xml
+Sitemap: https://lrr.researchrealm.net/sitemap.xml

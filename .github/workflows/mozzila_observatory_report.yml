@@ -10,4 +10,4 @@ jobs:
     name: Refresh HTTP Observatory Report
     steps:
       - name: Curl the site to initiate refresh
-        run: curl -L https://observatory.mozilla.org/analyze/rockraiders.rocks
+        run: curl -L https://observatory.mozilla.org/analyze/lrr.researchrealm.net
