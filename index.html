@@ -36,6 +36,9 @@
       border-radius: 10px;
       font-size: 36px;
       margin: 0;
+      display: inline-block;
+      max-width: 100%;
+      word-break: break-word;
     }
     .section {
       background: rgba(0, 0, 0, 0.85);
@@ -86,6 +89,9 @@
       gap: 10px;
       margin-bottom: 20px;
     }
+    #audio-header h1 {
+      flex: 0 1 auto;
+    }
     #playPauseBtn {
       background-color: #000;
       color: #ffcc00;
@@ -106,6 +112,10 @@
       h1 {
         font-size: 26px;
         line-height: 1.2;
+        flex: 1 1 auto;
+      }
+      #playPauseBtn {
+        margin-left: auto;
       }
     }
     h2 {
