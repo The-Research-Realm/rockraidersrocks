@@ -4,7 +4,7 @@ Git repo for the website lrr.researchrealm.net
 ## Validations
 [HTML valid](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Flrr.researchrealm.net)
 [CSS valid](https://jigsaw.w3.org/css-validator/validator?profile=css3svg&uri=https%3A%2F%2Flrr.researchrealm.net%2F&usermedium=all&vextwarning=&warning=1)
-Pagespeed Desktop score:
+Pagespeed Mobile score:
 
 ![Alt text](./.github/.lighthouse/PSIRM.svg)
 
