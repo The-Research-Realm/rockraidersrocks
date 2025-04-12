@@ -18,7 +18,6 @@ Pagespeed Desktop score:
 [![GitHub Actions Workflow Run Full OWASP Web Security Scan Status](https://img.shields.io/github/actions/workflow/status/The-Research-Realm/rockraidersrocks/owasp_full_scan.yml?label=OWASP%20Web%20Security%20Full%20Scan)](https://github.com/The-Research-Realm/rockraidersrocks/actions/workflows/owasp_full_scan.yml)
 [![GitHub Actions Workflow Retrieve Pagespeed Results Status](https://img.shields.io/github/actions/workflow/status/The-Research-Realm/rockraidersrocks/pagespeed.yml?label=Pagespeed)](https://github.com/The-Research-Realm/rockraidersrocks/actions/workflows/pagespeed.yml)
 [![GitHub Actions Workflow Minimize CSS Status](https://img.shields.io/github/actions/workflow/status/The-Research-Realm/rockraidersrocks/purgecss.yml?label=Minifity%20CSS)](https://github.com/The-Research-Realm/rockraidersrocks/actions/workflows/purgecss.yml)
-[![GitHub Actions Workflow Dependabot Status](https://img.shields.io/github/actions/workflow/status/The-Research-Realm/rockraidersrocks/dependabot.yml)](https://github.com/The-Research-Realm/rockraidersrocks/actions/workflows/dependabot/dependabot-updates)
 
 ## Security Headers and you
 
