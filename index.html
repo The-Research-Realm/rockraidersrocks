@@ -9,21 +9,22 @@
   <link rel="dns-prefetch" href="https://github.com">
 
   <link rel="icon" type="image/x-icon" href="RRicon.ico">
-  <meta name="description" content="Play your prefered language without having to fix the game!">
+  <meta name="description" content="Play your preferred language without having to fix the game!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lego Rock Raiders Installers!">
-  <meta property="og:description" content="Play your prefered language without having to fix the game & more!">
+  <meta property="og:description" content="Play your preferred language without having to fix the game & more!">
   <meta property="og:image" content="https://lrr.researchrealm.net/meta-images/sm-discord.avif">
   <meta name="theme-color" content="#221C18">
   <meta name="twitter:card" content="summary_large_image">
+
   <style nonce="CA66FDC87ECFAD9A0564A4EFF6E2DCA47C34CE8FC01DE4049480DD48CED56E228A1B1D045AA788E9D2B466233A07C6AB5B3813D2596Elmsexplorer18nov1999">
     html, body {
       margin: 0;
       cursor: url("images/cursor48.avif") 2 2, auto;
     }
-    button, button *, a, a *, li, li * {
+    button, a, li {
       cursor: url("images/cursor48.avif") 2 2, auto;
     }
     body {
@@ -50,49 +51,73 @@
       margin: 0;
       display: inline-block;
       max-width: 100%;
-      word-break: normal;
     }
+
     .section {
       background: rgba(0, 0, 0, 0.75);
-      padding: 20px;
+      padding: 20px 20px 30px;
       border-radius: 12px;
       margin-bottom: 40px;
       box-shadow: 0 0 10px #000;
     }
-    ul.language-list {
-      list-style-type: none;
-      padding-left: 0;
+
+    .language-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 15px;
+      margin-top: 15px;
     }
-    ul.full-width-list {
+
+    .language-button strong {
+      display: block;
+      text-align: left;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+
+    .full-width-list {
       list-style-type: none;
       padding-left: 0;
+      margin-top: 15px;
     }
-    li {
+
+    .full-width-list li:nth-child(1) {
+      margin-bottom: 25px;
+    }
+
+    .full-width-list li:last-child {
+      margin-bottom: -15px;
+    }
+
+    .language-button {
       background: #262626;
       padding: 20px;
       border-left: 6px solid #ffcc00;
       border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s;
       text-align: center;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
-    li:hover {
+
+    .language-button:hover {
       background: #333;
     }
+
+    .language-button.missing-installer {
+      border-left: 6px solid red;
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
     .addon-description {
       font-size: 0.95em;
       color: #ccc;
       margin-top: 10px;
       text-align: left;
     }
-    a {
-      color: inherit;
-      text-decoration: none;
-      display: block;
-    }
+
     #audio-header {
       display: flex;
       justify-content: space-between;
@@ -101,9 +126,11 @@
       gap: 10px;
       margin-bottom: 20px;
     }
+
     #audio-header h1 {
       flex: 0 1 auto;
     }
+
     #playPauseBtn {
       background-color: rgba(0, 0, 0, 0.75);
       color: #ffcc00;
@@ -114,22 +141,20 @@
       cursor: pointer;
       font-size: 18px;
     }
+
     #playPauseBtn:hover {
       background-color: #222;
     }
-    .addon-spacing {
-      margin-bottom: 20px;
-    }
+
     @media (max-width: 650px) {
       h1 {
         font-size: 26px;
-        line-height: 1.2;
-        flex: 1 1 auto;
       }
       #playPauseBtn {
         margin-left: auto;
       }
     }
+
     h2 {
       padding: 3px 8px;
       border-radius: 6px;
@@ -137,19 +162,21 @@
       margin-top: -5px;
       margin-bottom: -1px;
     }
+
     .section:last-of-type {
       margin-bottom: 0;
     }
-    *,
-    *::before,
-    *::after {
+
+    * {
       cursor: url("images/cursor48.avif") 2 2, auto !important;
     }
+
     .left-aligned {
       text-align: left;
     }
-    li.missing-installer {
-      border-left: 6px solid red;
+
+    .language-button.russian {
+      border-left: 6px solid rgb(255, 136, 0);
     }
   </style>
 </head>
@@ -163,49 +190,53 @@
 
   <div class="section">
     <h2>Choose Your Language</h2>
-    <ul class="language-list">
-      <li class="missing-installer"><span class="language-link">Česky (Czech)</span></li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Danish.installer.exe'">Dansk (Danish)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.German.installer.exe'">Deutsch (German)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.English.installer.exe'">English (English)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Spanish.installer.exe'">Español (Spanish)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.French.installer.exe'">Français (French)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Hebrew.installer.exe'">עבריים (Hebrews)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Croatian.installer.exe'">Hrvatski (Croatian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Italian.installer.exe'">Italiano (Italian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Japanese.installer.exe'">日本語 (Japanese)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Korean.installer.exe'">한국어 (Korean)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Dutch.installer.exe'">Nederlands (Dutch)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Norwegian.installer.exe'">Norsk (Norwegian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Polish.installer.exe'">Polski (Polish)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Portuguese.installer.exe'">Português (Portuguese)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Russian.zip'">Русский (Russian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Serbian.installer.exe'">Serbski (Serbian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Slovenian.installer.exe'">Slovenski (Slovenian)</li>
-      <li onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Swedish.installer.exe'">Svenska (Swedish)</li>
-      <li class="missing-installer"><span class="language-link">简体中文 (Chinese Simplified)</span></li>
-      <li class="missing-installer"><span class="language-link">繁體中文 (Chinese Traditional)</span></li>
-    </ul>
-  </div>  
+    <div class="language-list">
+      <div class="language-button missing-installer">Česky (Czech)</div>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Danish.installer.exe" download>Dansk (Danish)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.German.installer.exe" download>Deutsch (German)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.English.installer.exe" download>English (English)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Spanish.installer.exe" download>Español (Spanish)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.French.installer.exe" download>Français (French)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Hebrew.installer.exe" download>עבריים (Hebrew)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Croatian.installer.exe" download>Hrvatski (Croatian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Italian.installer.exe" download>Italiano (Italian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Japanese.installer.exe" download>日本語 (Japanese)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Korean.installer.exe" download>한국어 (Korean)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Dutch.installer.exe" download>Nederlands (Dutch)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Norwegian.installer.exe" download>Norsk (Norwegian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Polish.installer.exe" download>Polski (Polish)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Portuguese.installer.exe" download>Português (Portuguese)</a>
+      <a class="language-button russian" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Russian.zip" download>Русский (Russian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Serbian.installer.exe" download>Serbski (Serbian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Slovenian.installer.exe" download>Slovenski (Slovenian)</a>
+      <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Swedish.installer.exe" download>Svenska (Swedish)</a>
+      <div class="language-button missing-installer">简体中文 (Chinese Simplified)</div>
+      <div class="language-button missing-installer">繁體中文 (Chinese Traditional)</div>
+    </div>
+  </div>
 
   <div class="section">
     <h2>Optional Add-ons</h2>
     <ul class="full-width-list">
-      <li class="addon-spacing left-aligned" onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.OpenLRR.Supplemental-installer.exe'">
-        <strong>OpenLRR</strong>
-        <div class="addon-description">
-          An open-source reimplementation of Lego Rock Raiders. Built for modern systems with support for higher resolutions,
-          improved performance, compatibility enhancements, and a solid foundation for modding. Provides improved stability,
-          input support, and rendering across platforms while retaining the original gameplay logic.
-        </div>
+      <li class="addon-spacing left-aligned">
+        <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.OpenLRR.Supplemental-installer.exe" download>
+          <strong>OpenLRR</strong>
+          <div class="addon-description">
+            An open-source reimplementation of Lego Rock Raiders. Built for modern systems with support for higher resolutions,
+            improved performance, compatibility enhancements, and a solid foundation for modding. Provides improved stability,
+            input support, and rendering across platforms while retaining the original gameplay logic.
+          </div>
+        </a>
       </li>
-      <li class="left-aligned" onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Community.Edition.Supplemental-installer.exe'">
-        <strong>Lego Rock Raiders Community Edition</strong>
-        <div class="addon-description">
-          A refined version of the original game that includes high resolution support, visual and AI improvements,
-          overall performance boosts, bug fixes, and 8 custom training levels that appear in the main menu.
-          Designed for players who want a polished but faithful experience.
-        </div>
+      <li class="left-aligned">
+        <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Community.Edition.Supplemental-installer.exe" download>
+          <strong>Lego Rock Raiders Community Edition</strong>
+          <div class="addon-description">
+            A refined version of the original game that includes high resolution support, visual and AI improvements,
+            overall performance boosts, bug fixes, and 8 custom training levels that appear in the main menu.
+            Designed for players who want a polished but faithful experience.
+          </div>
+        </a>
       </li>
     </ul>
   </div>
@@ -213,17 +244,19 @@
   <div class="section">
     <h2>Standalone Overhaul</h2>
     <ul class="full-width-list">
-      <li class="left-aligned" onclick="window.location.href='https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Baz.s.Mod-installer.exe'">
-        <strong>Baz's Mod</strong>
-        <div class="addon-description">
-          A complete overhaul of Lego Rock Raiders offering a much harder and more strategic version of the game.
-          Includes rebalanced mechanics, new enemy behaviors, redesigned levels, and a focus on challenge and replayability.
-          This mod is separate from the base game and is installed as its own standalone version.
-        </div>
+      <li class="left-aligned">
+        <a class="language-button" href="https://github.com/Macleykun/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Baz.s.Mod-installer.exe" download>
+          <strong>Baz's Mod</strong>
+          <div class="addon-description">
+            A complete overhaul of Lego Rock Raiders offering a much harder and more strategic version of the game.
+            Includes rebalanced mechanics, new enemy behaviors, redesigned levels, and a focus on challenge and replayability.
+            This mod is separate from the base game and is installed as its own standalone version.
+          </div>
+        </a>
       </li>
     </ul>
   </div>
-  
+
   <script nonce="16E8CA185419EBD44CD33F8CB1E484FB16224D050B9C13FBC37152AAE940EC4DFAB10BD84F2D95CB48376B7A4C0221F04497ZALandSlideHasOccuredmay2019">
     const audio = document.getElementById("sampleAudio");
     const btn = document.getElementById("playPauseBtn");
