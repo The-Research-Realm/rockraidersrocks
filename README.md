@@ -1,6 +1,16 @@
 # lrr.researchrealm.net
 Git repo for the website lrr.researchrealm.net
 
+# Help wanted to fix the last language
+
+The Russian LegoRR.exe is the only one that has a bug that upgrading doesn't work. Which makes the unplayable!
+
+This version also requires the iso to be mounted, which is less ideal.
+
+It seems that the issue lies within the LegoRR.exe itself but it's unclear why this happens. This is also the only executable that is able to read the Russian language from the wad files aswell. It isn't protected by SafeDisc however!
+
+You can download the zip with the installer and iso [here](https://github.com/The-Research-Realm/rockraidersrocks/releases/download/1.0/Lego.Rock.Raiders.Russian.zip) (700 MB). We would greatly appricate any help to preserve all the languages in a working order! Do feel free to contact us using the issues or joining the [Discord server](https://discord.com/invite/2cuKpkHvMJ).
+
 ## Validations
 [HTML valid](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Flrr.researchrealm.net)
 [CSS valid](https://jigsaw.w3.org/css-validator/validator?profile=css3svg&uri=https%3A%2F%2Flrr.researchrealm.net%2F&usermedium=all&vextwarning=&warning=1)
@@ -27,7 +37,7 @@ This website is hosted fully on [CloudFlare JAM](https://www.cloudflare.com/lear
 
 All the installers are independedly hosted on GitHub using the Releases feature. If this repo get's deleted, the mirror will be up as backup. Thanks to the integration to CloudFlare, even if both repo's are gone the respective website's will still be up. However the installers will be lost but can be hosted elsewhere (archive.org). Uploading these installers takes about an hour.
 
-At the time of writing, 3 languages are still missing (Both Chinese languages and Czech), aswell as the Russian language that requires the ISO to be mounted. This version is also the only version that has a critical bug that the upgrade button doesn't work. If you can help with this, please create an issue or join the ResearchRealm Discord so we can get in touch!
+All versions have working cutscene's, original sound and also start withoud issues. Only the Russian one requires the game disc to be mounted. It also has a bug that makes upgrading anything impossible, so you have to use cheats to bypass this.
 
 ## Setup
 
