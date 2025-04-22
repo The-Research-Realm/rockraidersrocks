@@ -108,7 +108,7 @@ That's because the masterpiece edition doesn't stream the audio from the CD. But
 
 ### What's up with the add-ons?
 
-[Higher quality music and more tracks](). Contains audio files that replace the original that comes with the game. The Atmosdel song is replaced in the main menu, but also the onces ingame! You get to enjoy remastered tracks and more tracks composed by R.R. Slugger! Note that you do need to reinstall the game if you decide to remove this add-on and wish to listen to the original tracks.
+[Higher quality music and more tracks](). Contains audio files that replace the original that comes with the game. You get to enjoy remastered tracks and more tracks composed by R.R. Slugger! Note that you do need to reinstall the game if you decide to remove this add-on and wish to listen to the original tracks.
 
 [OpenLRR](https://github.com/trigger-segfault/OpenLRR) is an open source re-implementation of LEGO Rock Raiders (PC). This is created by slowly implementing and replacing game functionality, while relying on the original executable and game assets for everything else.
 
