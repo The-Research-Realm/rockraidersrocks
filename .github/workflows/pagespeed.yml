@@ -16,7 +16,11 @@ jobs:
     - name: Fetch resulsts and save it in the repo
       run: |
           mkdir -p ${RESULTSFOLDER}
+          curl "${PSURL}/?url=${HOST}&strategy=desktop"
+          curl "${PSURL}/?url=${HOST}&strategy=desktop"
           curl "${PSURL}/?url=${HOST}&strategy=desktop" > ./${RESULTSFOLDER}/PSIRD.svg
+          curl "${PSURL}/?url=${HOST}&strategy=mobile"
+          curl "${PSURL}/?url=${HOST}&strategy=mobile"
           curl "${PSURL}/?url=${HOST}&strategy=mobile" > ./${RESULTSFOLDER}/PSIRM.svg
     - name: Commit files
       run: |
