@@ -1,5 +1,6 @@
 # lrr.researchrealm.net
 Git repo for the website lrr.researchrealm.net
+To see the full setup of how the installers were created, see: https://archive.org/download/BRRICS
 
 # Help wanted to fix the last language
 
