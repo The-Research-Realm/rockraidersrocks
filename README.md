@@ -2,7 +2,7 @@
 Git repo for the website lrr.researchrealm.net
 To see the full setup of how the installers were created, see: https://archive.org/download/BRRICS
 
-# Apprication for fixing the Russian Lego Rock Raiders NOCD patch
+# Appreciation for fixing the Russian Lego Rock Raiders NOCD patch
 We're very greatful for [ioncodes](https://github.com/ioncodes/LRR_RU_NOCD/releases/tag/v2) work to remove the check if an iso is mounted with the volume label: ROCKRAIDERS.
 Previously you would get a .zip file when downloaded from our releases or webpages, which has the .iso to run the game and .exe to install the game. This has now been changed to just include the installer with the patched d3drm.dll file(s). In summary, the d3drm.dll patches out the check and then loads the real d3drm.dll (d3drm_ori.dll).
 A seperate archive for this fix is made [here](https://archive.org/download/nocd-patch-lego-rock-raiders-russian). Again we're sincerely greatful for this patch!
