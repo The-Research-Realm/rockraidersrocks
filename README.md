@@ -2,7 +2,7 @@
 Git repo for the website lrr.researchrealm.net
 To see the full setup of how the installers were created, see: https://archive.org/download/BRRICS
 
-# A BIG thank you to [ioncodes](https://github.com/ioncodes/LRR_RU_NOCD/releases/tag/v3) work for the Russian Lego Rock Raiders release!
+# A BIG thank you to [ioncodes](https://layle.me/posts/lego-rock-raiders-ru/) work for the Russian Lego Rock Raiders release!
 We're very greatful for [ioncodes](https://github.com/ioncodes/LRR_RU_NOCD) work to remove the (DRM) checks that [Noviy_Disk](https://kb.rockraidersunited.com/Noviy_Disk) brough when releasing Lego Rock Raiders in Russia!
 It is now possible to run the game withoud any disc or iso mounted. Also any oddities like upgrading buildings, rockraiders or simply idleing in game; are all patched!
 Only in the Russian installer we added a cd.key in the data folder (just in case, but this isn't used anywhere anymore in the code) aswell as a special patched d3drm.dll that patches these functions and then passed other calls to d3drm_ori.dll.
